@@ -35,7 +35,7 @@ extern "C" {
 #include "lpeg/lpvm.h"
 
 int luaopen_lpeg(lua_State *L);
-
+  
 
 #if __cplusplus
 }
@@ -91,30 +91,30 @@ int luaopen_pack(lua_State *L);
 
 在luax_exts内，加入下列几行。
 
-{ "sproto.core", luaopen_sproto_core },
+  { "sproto.core", luaopen_sproto_core },
 #if (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID)
-{ "bit", luaopen_bit },
+  { "bit", luaopen_bit },
 #endif
-{ "lpeg", luaopen_lpeg },
-{ "string", luaopen_pack },
+  { "lpeg", luaopen_lpeg },
+  { "string", luaopen_pack },
 
 ``` 
 Android支持
 
 在cocos2d-x/cocos/scripting/lua-bindings/proj.android目录下，打开 Android.mk 文件，在那一长串加载c文件后面，加入我们需要的c文件
 ``` 
-    ../../../../external/lua/lpeg/lpcap.c \
-    ../../../../external/lua/lpeg/lpcode.c \
-    ../../../../external/lua/lpeg/lpprint.c \
-    ../../../../external/lua/lpeg/lptree.c \
-    ../../../../external/lua/lpeg/lpvm.c \
-    ../../../../external/lua/sproto/lsproto.c \
-    ../../../../external/lua/sproto/sproto.c \
-    ../../../../external/lua/lpack/lpack.c 
+      ../../../../external/lua/lpeg/lpcap.c \
+      ../../../../external/lua/lpeg/lpcode.c \
+      ../../../../external/lua/lpeg/lpprint.c \
+      ../../../../external/lua/lpeg/lptree.c \
+      ../../../../external/lua/lpeg/lpvm.c \
+      ../../../../external/lua/sproto/lsproto.c \
+      ../../../../external/lua/sproto/sproto.c \
+      ../../../../external/lua/lpack/lpack.c 
 ``` 
 Android支持luajit库，里面已经包含了bit库，所以不用加bit.c了，不然编译的时候会出现多重定义的错误。
 
 总得来说还是很简单的，只需三步：
-文件放到cocos2d-x/external/lua目录下
-修改lua_extensions.c，包含相关文件
-修改Android.mk做Android支持
+  文件放到cocos2d-x/external/lua目录下
+  修改lua_extensions.c，包含相关文件
+  修改Android.mk做Android支持
