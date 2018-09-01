@@ -1,4 +1,5 @@
-在cocos2d-x/external/lua 目录下新建三个文件夹 sproto,bitop,lpeg。然后将各自的文件放入其中，为了符合cocos2dx的规范，需要在bitop中建立一个bit.h文件，内容如下:
+
+在cocos2d-x/external/lua 目录下新建四个文件夹sproto,bitop,lpeg,lpack。然后将各自的文件放入其中，为了符合cocos2dx的规范，需要在bitop中建立一个bit.h文件，内容如下:
 ``` 
 #ifndef __LUA_BITOP_H_
 #define __LUA_BITOP_H_
@@ -87,10 +88,6 @@ int luaopen_pack(lua_State *L);
 #endif
 #include "lpeg/lpeg.h"
 #include "lpack/lpack.h"
-
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID)
-#include "bitop/bit.h"
-#endif
 
 在luax_exts内，加入下列几行。
 
