@@ -80,7 +80,7 @@ int luaopen_pack(lua_State *L);
 #endif
 ``` 
 
-在cocos2d-x/cocos/scripting/lua-bindings/manual目录下，找到 lua_extensions.c 文件。在头部包含所需文件。
+在cocos2d-x/cocos/scripting/lua-bindings/manual/network目录下，找到 lua_extensions.c 文件。在头部包含所需文件。
 ``` 
 #include "sproto/lsproto.h"
 #if (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID)
