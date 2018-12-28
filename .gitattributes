@@ -16,3 +16,4 @@
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
 *.c linguist-language=c
+*.h linguist-language=c
