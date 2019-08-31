@@ -1,3 +1,4 @@
+https://github.com/dot123/cocos2d-lua-sproto.git
 
 在cocos2d-x/external/lua 目录下新建四个文件夹sproto,bitop,lpeg,lpack。然后将各自的文件放入其中，为了符合cocos2dx的规范，需要在bitop中建立一个bit.h文件，内容如下:
 ``` 
@@ -118,5 +119,3 @@ Android支持luajit库，里面已经包含了bit库，所以不用加bit.c了�
   文件放到cocos2d-x/external/lua目录下
   修改lua_extensions.c，包含相关文件
   修改Android.mk做Android支持
-
-https://github.com/dot123/cocos2d-lua-sproto.git
