@@ -118,3 +118,5 @@ Android支持luajit库，里面已经包含了bit库，所以不用加bit.c了�
   文件放到cocos2d-x/external/lua目录下
   修改lua_extensions.c，包含相关文件
   修改Android.mk做Android支持
+
+https://github.com/dot123/cocos2d-lua-sproto.git
